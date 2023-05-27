@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: red;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-top: 5vh;
+}
+
+.heart-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+
+.heart {
+    font-size: 5vh;
+    color: red;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+    width: 80%;
+    max-width: 400px;
+}
+
+.carousel-btn-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1vh;
+}
+
+.carousel-btn {
+    background-color: red;
+    color: white;
+    font-size: 3vh;
+    border: none;
+    cursor: pointer;
+    padding: 1vh 2vh;
+}
+
+.carousel-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-item {
+    display: none;
+    font-size: 4vh;
+    text-align: center;
+    margin: 1vh;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-btn-left {
+    order: 1;
+}
+
+.carousel-btn-right {
+    order: 2;
+}
